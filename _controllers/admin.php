@@ -37,4 +37,12 @@ class Admin{
 	function user_account(){
 		Load::controller('user_account');
 	}
+
+	function event_lists(){
+		Load::controller('events');
+	}
+
+	function registered_events(){
+		Load::controller('runner_events');
+	}
 }

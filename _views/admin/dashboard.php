@@ -14,7 +14,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                                 </ol>
                             </nav>
                         </div>
@@ -51,14 +51,18 @@
                         </div>
                     </div>
                      <!-- Column -->
+                    
                     <div class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
-                            <div class="box bg-warning text-center">
-                                <h1 class="font-light text-white"><i class="mdi mdi-run"></i></h1>
-                                <h6 class="text-white">Events</h6>
-                            </div>
+                            <a href="<?php echo SITE_URL.'/admin/event_lists'; ?>">
+                                <div class="box bg-warning text-center">
+                                    <h1 class="font-light text-white"><i class="mdi mdi-run"></i></h1>
+                                    <h6 class="text-white">Events</h6>
+                                </div>
+                            </a>
                         </div>
                     </div>
+                    
                     <!-- Column -->
                     <div class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
