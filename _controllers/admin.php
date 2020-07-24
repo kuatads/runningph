@@ -45,4 +45,8 @@ class Admin{
 	function registered_events(){
 		Load::controller('runner_events');
 	}
+
+	function orders(){
+		Load::controller('orders');
+	}
 }
