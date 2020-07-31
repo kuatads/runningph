@@ -80,13 +80,6 @@
                                             </tr>
                                         </tbody>
                                         <tfoot>
-                                            <tr>
-                                                <th>Order No.</th>
-                                                <th>Date</th>
-                                                <th>Status</th>
-                                                <th>Total</th>
-                                                <th>Actions</th>
-                                            </tr>
                                         </tfoot>
                                     </table>
                                 </div>
