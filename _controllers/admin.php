@@ -9,7 +9,8 @@ class Admin{
 				'photo'=>$_SESSION['photo'],
 				'user_type'=>$_SESSION['user_type'],
 				'username'=>$_SESSION['username'],
-				'status'=>$_SESSION['status']
+				'status'=>$_SESSION['status'],
+				'ID'=>$_SESSION['user_ID']
 			);
 			
 		if(!isset($_GET['ajax'])){

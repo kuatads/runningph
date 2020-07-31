@@ -34,25 +34,26 @@
                 <div class="row">
                     <div class="col-md-10">
                         <div class="card">
-                            <form class="form-horizontal">
+                            <form class="form-horizontal" action="" name="form" method="POST">
                                 <div class="card-body">
                                     <h4 class="card-title">Personal Info</h4>
                                     <div class="form-group row">
                                         <label for="fname" class="col-sm-3 text-right control-label col-form-label">Full Name</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="fullname" placeholder="Full Name Here">
+                                            <input type="text" class="form-control" id="fullname" name="fullname" value="<?php echo !empty($_SESSION['user_ID']) ? $fullname : '' ?>">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Contact No</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="contactno" placeholder="Contact No Here">
+                                            <input type="text" class="form-control" id="contactno" name="contactno" value="<?php echo !empty($_SESSION['user_ID']) ? $mobile : '' ?>">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Address</label>
+                                        <label for="address" class="col-sm-3 text-right control-label col-form-label">Address</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control"></textarea>
+                                            <input type="text" class="form-control" id="address" name="address" value="<?php echo !empty($_SESSION['user_ID']) ? $address : '' ?>">
+                                            <small> Address will be the primary delivery address.</small>
                                         </div>
                                     </div>
                                 </div>
@@ -61,25 +62,38 @@
                                     <div class="form-group row">
                                         <label for="username" class="col-sm-3 text-right control-label col-form-label">Username</label>
                                         <div class="col-sm-9">
-                                            <input disabled type="text" class="form-control" id="username" placeholder="etuyco">
+                                            <input disabled type="text" class="form-control" id="username" value="<?php echo $username; ?>">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="email" class="col-sm-3 text-right control-label col-form-label">Email</label>
                                         <div class="col-sm-9">
-                                            <input type="password" class="form-control" id="email" placeholder="">
+                                            <input type="text" class="form-control" id="email" value="<?php echo $email; ?>">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="password" class="col-sm-3 text-right control-label col-form-label">Password</label>
+                                        <label for="password" class="col-sm-3 text-right control-label col-form-label">Current Password</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="password" placeholder="">
+                                            <input type="password" class="form-control" id="password" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="password" class="col-sm-3 text-right control-label col-form-label">New Password</label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="new-password" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="password" class="col-sm-3 text-right control-label col-form-label">Confirm Password</label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="form-control" id="confirm-password" placeholder="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="border-top">
                                     <div class="card-body">
-                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <input type="hidden" id="userid" name="userid" value="<?php echo $_SESSION['user_ID'] ?>">
+                                        <button type="button" id="btnUserUpdate" class="btn btn-primary">Submit</button>
                                     </div>
                                 </div>
                             </form>
@@ -89,7 +103,7 @@
                         <div class="card">
                              <form class="form-horizontal">
                                 <div class="card-body">
-                                    <img width="140px" height="140px" src="<?php echo SITE_URL.'/uploads/tads.jpg' ?>">
+                                    <img width="140px" height="140px" src="<?php echo SITE_URL.'/uploads/'.$profilePic; ?>">
                                     <div class="form-group row">
                                          <div class="custom-file">
                                             <input type="file" class="custom-file-input btn-sm" id="validatedCustomFile" required>

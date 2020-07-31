@@ -45,6 +45,30 @@ class User{
 
 	}
 
+	function getUserDetails($uid){
+		$db = new DB();
+		$stmt = $db->query("SELECT * FROM users
+			WHERE ID = $uid", array());
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return (empty($result)) ? false : $result;
+	}
 	
+	public function updateUserDetails($userID,$fullname,$contactno,$address){
+		$db = new DB();
+		$q = "UPDATE `users` 
+				SET 
+					name  	   	=:name,
+					mobile 		=:mobile,
+					address		=:address,
+					status		= '1',
+					date_added 	= CURDATE() 
+			WHERE ID = $userID";
+		$arr = array(
+			"name"		=>$fullname, 
+			"mobile"   	=>$contactno,
+			"address"	=>$address
+		);
+		$db->query($q,$arr);
+	}
 
 }
