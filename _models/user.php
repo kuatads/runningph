@@ -68,7 +68,13 @@ class User{
 			"mobile"   	=>$contactno,
 			"address"	=>$address
 		);
-		$db->query($q,$arr);
+		if(empty($arr))
+			return false;
+		else {
+			$db->query($q,$arr);
+			$_SESSION['status'] = 1;
+		}
+		
 	}
 
 }

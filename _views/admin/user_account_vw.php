@@ -52,7 +52,7 @@
                                     <div class="form-group row">
                                         <label for="address" class="col-sm-3 text-right control-label col-form-label">Address</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="address" name="address" value="<?php echo !empty($_SESSION['user_ID']) ? $address : '' ?>">
+                                            <input type="text" class="form-control" id="address" name="address" value="<?php echo !empty($address) ? $address : '' ?>">
                                             <small> Address will be the primary delivery address.</small>
                                         </div>
                                     </div>
@@ -74,7 +74,12 @@
                                     <div class="form-group row">
                                         <label for="password" class="col-sm-3 text-right control-label col-form-label">Current Password</label>
                                         <div class="col-sm-9">
-                                            <input type="password" class="form-control" id="password" placeholder="">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" aria-label="Current Password" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text" id="basic-addon2"><button class="btn mdi mdi-eye-outline-off"></button></span>
+                                            </div>
+                                        </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
