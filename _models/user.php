@@ -45,6 +45,13 @@ class User{
 
 	}
 
+	function getAllRunners(){
+		$db = new DB();
+		$stmt = $db->query("SELECT * FROM users", array());
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return (empty($result)) ? false : $result;
+	}
+
 	function getUserDetails($uid){
 		$db = new DB();
 		$stmt = $db->query("SELECT * FROM users

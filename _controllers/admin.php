@@ -50,4 +50,8 @@ class Admin{
 	function orders(){
 		Load::controller('orders');
 	}
+
+	function runners(){
+		Load::controller('runners');
+	}
 }
