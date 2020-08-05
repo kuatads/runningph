@@ -54,4 +54,8 @@ class Admin{
 	function runners(){
 		Load::controller('runners');
 	}
+
+	function events_form(){
+		Load::controller('events_form');
+	}
 }

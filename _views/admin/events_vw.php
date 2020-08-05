@@ -28,6 +28,10 @@
             <!-- Container fluid  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
+            <?php if($_SESSION['user_type'] == 'Administrator') : ?>
+                <a href="<?php echo SITE_URL.'/admin/events_form' ?>" class="btn btn-default align-items-right"><i class="mdi mdi-library-plus"></i> Add New Event</a>
+            <?php endif; ?>
+            <hr/>
                 <!-- ============================================================== -->
                 <!-- Event Cards  -->
                 <!-- ============================================================== -->

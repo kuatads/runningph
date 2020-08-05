@@ -46,11 +46,36 @@
     <script src="<?php echo SITE_URL ?>/assets/extra-libs/DataTables/datatables.min.js"></script>
     <script src="<?php echo SITE_URL ?>/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
     <script src="<?php echo SITE_URL ?>/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+    <script src="<?php echo SITE_URL ?>/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- QUILL -->
+    <script src="<?php echo SITE_URL ?>/assets/libs/quill/dist/quill.min.js"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="<?php echo SITE_URL ?>/assets/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
     <script>
         /****************************************
          *       Basic Table                   *
          ****************************************/
         $('#zero_config').DataTable();
+    </script>
+
+        
+    <script type="text/javascript">
+    jQuery('#datepicker-autoclose').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+    
+    jQuery('#datepicker-autoclose-2').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    /****************************************
+     *       Event Details Textarea         *
+    ****************************************/
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
     </script>
 
 </body> 
