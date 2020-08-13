@@ -8,7 +8,7 @@ define('USERDBIP',"localhost");
 // DBs
 define('USERDBNAME',"runningphdb");
 // URL
-define('SITEURL',"http://runningph.test");
+define('SITEURL',"http://".$_SERVER['SERVER_NAME']);
 
 define ('CURRENCY','Php');
 
